@@ -8,6 +8,7 @@ Clone this repo into your `~/.vscode/extensions`. Restart your vscode to apply c
 
 ## TODO
 
+-   [x] Keywords
 -   [x] Comments
 -   [x] Strings
 -   [ ] Numbers
