@@ -1,25 +1,34 @@
 {
-    "name": "pocketlang",
-    "displayName": "PocketLang",
-    "description": "Syntax highlight for PocketLang Programming language",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.57.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [{
-            "id": "pocketlang",
-            "aliases": ["Pocketlang", "pocketlang"],
-            "extensions": [".pk"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "pocketlang",
-            "scopeName": "main.pk",
-            "path": "./syntaxes/pocketlang.tmLanguage.json"
-        }]
-    }
+	"name": "pocketlang",
+	"displayName": "PocketLang",
+	"description": "Syntax highlight for PocketLang Programming language",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.57.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "pocketlang",
+				"aliases": [
+					"Pocketlang",
+					"pocketlang"
+				],
+				"extensions": [
+					".pk"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "pocketlang",
+				"scopeName": "source.pocketlang",
+				"path": "./syntaxes/pocketlang.tmLanguage.json"
+			}
+		]
+	}
 }

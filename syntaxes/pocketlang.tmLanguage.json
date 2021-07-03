@@ -1,32 +1,66 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Pocketlang",
+	"scopeName": "source.pocketlang",
 	"patterns": [
 		{
 			"include": "#keywords"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.pocketlang",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.pocketlang",
-			"begin": "\"",
-			"end": "\"",
+		"comments": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.pocketlang",
-					"match": "\\\\."
+					"name": "comment.line.number-sign.pocketlang",
+					"begin": "(\\#)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment.pocketlang"
+						}
+					},
+					"end": "($)"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.pocketlang",
+					"match": "\\b(if|elsif|end|then|in|do|def|class|import|as|from|module|while|for|return)\\b"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.pocketlang",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.pocketlang",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.single.pocketlang",
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+						{
+							"name": "constant.character.escape.pocketlang",
+							"match": "\\\\."
+						}
+					]
 				}
 			]
 		}
-	},
-	"scopeName": "main.pk"
+	}
 }
